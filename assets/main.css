@@ -1,0 +1,338 @@
+/*
+ * Student Name: Cassidy Perry
+ * Student ID: 041038298 
+ * Course: CST8117 - Cross-Platform Web Design
+ * Semester: Winter 2024
+ * Assignment: 2
+ * Date Submitted:  2024-03-04
+ */
+
+.skip-link {
+  color: #ffaac4;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background-color: #ffe5ed;
+}
+
+/* The colour palate I have chosen is a monotone colour palate with black and white for added contrast*/
+header {
+  width: 100%;
+  height: 70px;
+  background-image: linear-gradient(to bottom right, #ff709c, #ffaac4);
+}
+
+nav {
+  background-color: #000000;
+  width: 100%;
+  opacity: 0.9;
+  align-items: center;
+}
+
+ul.menu {
+  text-align: center;
+  margin: 0%;
+}
+
+.logo {
+  width: 15%;
+  float: left;
+  text-align: left;
+  line-height: 50px;
+  padding-top: 20px;
+  padding-left: 20px;
+  color: white;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-family: "Bad Script", cursive;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.logo a:hover {
+  background-color: #ffffff;
+  color: #ffaac4;
+}
+
+nav {
+  line-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  margin-left: 15%;
+}
+
+ul {
+  list-style: none;
+}
+li {
+  display: inline;
+  text-align: center;
+}
+
+.shopping-cart {
+  float: right;
+}
+
+nav a {
+  color: aliceblue;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 2px;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+nav a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.banner-area {
+  background-image: url(https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg?auto=compress&cs=tinysrgb&w=600);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000000;
+  border-radius: 10px;
+}
+.search {
+  display: flex;
+  justify-content: flex-end;
+}
+.search-bar {
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 10px;
+}
+
+.go-button {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.go-button:hover {
+  background-color: #ff709c;
+}
+
+h1 {
+  padding: 150px;
+  color: white;
+}
+
+h2 {
+  margin: 10px;
+  padding-top: 20px;
+}
+
+h3 {
+  margin: 10px;
+}
+
+h4 {
+  text-align: left;
+  margin: 2%;
+}
+
+hgroup {
+  font-family: "Bad Script", cursive;
+  padding: 5px;
+}
+main {
+  width: 66%;
+  display: block;
+  margin: 0% auto;
+  background-color: whitesmoke;
+
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  direction: row;
+  padding: 30px;
+  align-items: center;
+  padding-top: 0px;
+}
+
+.column-1 {
+  margin: 7%;
+}
+
+.column-2 {
+  flex-wrap: wrap;
+  max-width: 460px;
+  text-align: left;
+}
+
+figcaption {
+  font-size: 16px;
+}
+
+table,
+tr,
+th,
+td {
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 25px;
+  background-image: linear-gradient(#ffaac4, #ff709c);
+  border-radius: 10px;
+}
+
+footer,
+a {
+  color: #000000;
+}
+.footer-socials {
+  padding: 7px;
+}
+.footer-socials a {
+  padding: 5px;
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.7);
+  opacity: 0.8;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+footer address {
+  padding: 5px;
+}
+
+.privacy-content {
+  text-align: left;
+}
+
+.terms-content {
+  text-align: left;
+}
+
+/* (JavaScript - how to create a responsive hamburger menu with HTML, CSS, &amp; javascript 2021) */
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  line-height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: blue;
+}
+/* media query should take the max screen size of 375 for the average phone screen size and when it its smaller
+than that it should remove the horizontal nav bar and display
+hamber side menu. 
+
+*/
+@media (max-width: 375px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active bar:nth-child(1) {
+    transform: translate(8px) roate(45deg);
+  }
+
+  .hamburger.active bar:nth-child(3) {
+    transform: translate(-8px) roate(-45deg);
+  }
+
+  .menu {
+    position: fixed;
+    left: -100%;
+    top: 285px;
+    gap: 0;
+    flex-direction: column;
+    background-color: red;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .menu:active {
+    left: 0;
+  }
+}
+
+/* (Form validation using Jquery examples 2021) */
+
+.error-message {
+  display: block;
+  color: red;
+  font-size: 14px;
+}
+
+.input-container {
+  border-radius: 15px;
+  border: 5px solid #000000;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-container .input-row {
+  margin-bottom: 12px;
+}
+
+.input-container input:not([type="submit"]),
+.input-container textarea {
+  width: 90%;
+  margin: 0 0 3px;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px solid #000000;
+}
+
+#consentBox {
+  width: 20px;
+  height: 20px;
+}
+
+.input-row button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 15px;
+  background-color: black;
+  color: white;
+  transition: ease-in-out 4ms;
+}
+
+.input-row button:hover {
+  background-color: #ff709c;
+  color: #000000;
+  cursor: pointer;
+}
